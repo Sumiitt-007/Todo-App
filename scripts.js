@@ -90,6 +90,10 @@ document.addEventListener('DOMContentLoaded',() => {
     updateProgress();
     todosContainer.style.width = taskList.children.length > 0 ? '100%' : '50%';
 
+    if(shouldSave){
+      saveToLocalStorage();
+    }
+
   };
 
   addTaskBtn.addEventListener('click',(e) => {
